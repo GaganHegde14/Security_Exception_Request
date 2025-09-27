@@ -1,0 +1,247 @@
+/* TransferWorkflow Component Styles */
+.transfer-workflow-section {
+  margin-top: 20px;
+  margin-left: -24px;
+  margin-right: -24px;
+  overflow: hidden;
+  font-family: "Samsung InterFace", "Segoe UI", Arial, sans-serif;
+}
+
+.transfer-workflow-header {
+  background-color: #eff6ff;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.transfer-workflow-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.transfer-workflow-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  flex-grow: 1;
+}
+
+.dropdown-arrow-icon {
+  width: 20px;
+  height: 20px;
+  margin-left: 16px;
+}
+
+.transfer-workflow-content {
+  background: transparent;
+  padding: 20px;
+}
+
+/* Request Type Section */
+.request-type-section {
+  margin-bottom: 20px;
+}
+
+.request-type-label {
+  display: block;
+  font-weight: 650;
+  color: #333;
+  margin-bottom: 12px;
+  font-size: 15px;
+}
+
+.request-type-options {
+  display: flex;
+  gap: 32px;
+}
+
+.request-type-options .radio-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  position: relative;
+}
+
+.request-type-options .radio-option input[type="radio"] {
+  margin: 0;
+  width: 18px;
+  height: 18px;
+  appearance: none;
+  border: 2px solid #dee2e6;
+  border-radius: 50%;
+  background: white;
+  position: relative;
+  cursor: pointer;
+}
+
+.request-type-options .radio-option input[type="radio"]:checked {
+  border-color: #38aee0;
+  background: white;
+}
+
+.request-type-options .radio-option input[type="radio"]:checked::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #38aee0;
+}
+
+.request-type-options .radio-option .radio-text {
+  font-weight: normal;
+  color: #333;
+}
+
+.request-type-options .radio-option input[type="radio"]:checked + .radio-text {
+  font-weight: 600;
+  color: #333;
+}
+
+/* Transfer To Section */
+.transfer-to-section {
+  margin-bottom: 16px;
+}
+
+.transfer-to-label {
+  display: block;
+  font-weight: 650;
+  color: #333;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.transfer-to-input {
+  width: 100%;
+  height: 40px;
+  padding: 8px 12px;
+  border: 1px solid #d0d0d0;
+  background-color: white;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 14px;
+  color: #333;
+  box-sizing: border-box;
+}
+
+.transfer-to-input:focus {
+  outline: none;
+  border-color: #38aee0;
+  box-shadow: 0 0 0 2px rgba(56, 174, 224, 0.25);
+}
+
+/* Transfer Comment Section */
+.transfer-comment-section {
+  margin-bottom: 16px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.transfer-comment-label {
+  display: block;
+  font-weight: 650;
+  color: #333;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.transfer-comment-textarea {
+  width: 100%;
+  height: 90px;
+  min-height: 90px;
+  max-height: 90px;
+  padding: 10px 12px;
+  border: 1px solid #d0d0d0;
+  background-color: white;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 14px;
+  color: #333;
+  resize: none;
+  line-height: 1.4;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.transfer-comment-textarea:focus {
+  outline: none;
+  border-color: #38aee0;
+  box-shadow: 0 0 0 2px rgba(56, 174, 224, 0.25);
+}
+
+/* Transfer Workflow Button */
+.transfer-workflow-button {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 16px;
+}
+
+.transfer-wf-button {
+  padding: 8px 7px;
+  border: 2px solid #38aee0;
+  background-color: transparent;
+  color: #38aee0;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: none;
+}
+
+.transfer-wf-button:hover {
+  background-color: transparent;
+  color: #38aee0;
+  border-color: #38aee0;
+  transform: none;
+  box-shadow: none;
+}
+
+.transfer-wf-button:focus {
+  outline: none;
+  background-color: transparent;
+  color: #38aee0;
+  border-color: #38aee0;
+}
+
+.transfer-wf-icon {
+  width: 20px;
+  height: 20px;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .transfer-workflow-section {
+    margin-left: -16px;
+    margin-right: -16px;
+  }
+
+  .transfer-workflow-header {
+    padding: 12px 16px;
+  }
+
+  .transfer-workflow-content {
+    padding: 16px;
+  }
+
+  .request-type-options {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .transfer-wf-button {
+    width: 100%;
+    justify-content: center;
+  }
+}

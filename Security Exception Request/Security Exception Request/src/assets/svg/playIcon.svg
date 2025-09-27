@@ -1,0 +1,27 @@
+  <svg
+                  width="27"
+                  height="27"
+                  viewBox="0 0 27 27"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle
+                    cx="13.5"
+                    cy="13.5"
+                    r="10.5"
+                    transform="rotate(-90 13.5 13.5)"
+                    stroke="#1C3454"
+                    strokeOpacity="0.26"
+                    strokeWidth="5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="M13.5 3C14.8789 3 16.2443 3.27159 17.5182 3.79927C18.7921 4.32694 19.9496 5.10036 20.9246 6.07538C21.8996 7.05039 22.6731 8.20791 23.2007 9.48182C23.7284 10.7557 24 12.1211 24 13.5C24 14.8789 23.7284 16.2443 23.2007 17.5182C22.6731 18.7921 21.8996 19.9496 20.9246 20.9246C19.9496 21.8996 18.7921 22.6731 17.5182 23.2007C16.2443 23.7284 14.8789 24 13.5 24"
+                    stroke="#006FFD"
+                    strokeWidth="5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path d="M10 8L17 13.5L10 19V8Z" fill="#434343" />
+                </svg>
