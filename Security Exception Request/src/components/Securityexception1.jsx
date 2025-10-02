@@ -18,10 +18,10 @@ const SecurityTraining = () => {
   const [projectName, setProjectName] = useState(
     "IoT_Advanced_Features_Gen_RI_V_Y2023"
   );
-  const [periodFrom, setPeriodFrom] = useState("");
+  const [periodFrom, setPeriodFrom] = useState("2025-06-12");
   const [showApprovalPopup, setShowApprovalPopup] = useState(false);
-  const [periodTo, setPeriodTo] = useState("");
-  const [expiryDate, setExpiryDate] = useState("");
+  const [periodTo, setPeriodTo] = useState("2026-06-12");
+  const [expiryDate, setExpiryDate] = useState("2026-06-12");
   const blueInfoRef = useRef(null);
 
   // Calendar states
@@ -29,9 +29,7 @@ const SecurityTraining = () => {
   const [activeCalendarField, setActiveCalendarField] = useState(null);
   const [calendarPosition, setCalendarPosition] = useState({ top: 0, left: 0 });
 
-  const [securityException, setSecurityException] = useState(
-    "SMTP- Outlook access/usage of SMTP host to send emails"
-  );
+  const [securityException, setSecurityException] = useState(0);
   const [problemDescription, setProblemDescription] =
     useState("XXX-XXX-XX-XXX-X");
   const [impactOnProject, setImpactOnProject] = useState("XXX-XXX-XX-XXX-X");
@@ -230,9 +228,11 @@ const SecurityTraining = () => {
                 <input
                   type="radio"
                   name="securityException"
-                  value={option}
-                  checked={securityException === option}
-                  onChange={(e) => setSecurityException(e.target.value)}
+                  value={index}
+                  checked={securityException === index}
+                  onChange={(e) =>
+                    setSecurityException(parseInt(e.target.value))
+                  }
                   className="radio-input"
                 />
                 <span

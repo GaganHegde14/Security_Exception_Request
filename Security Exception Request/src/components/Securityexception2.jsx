@@ -17,9 +17,9 @@ import DatePicker from "./DatePicker";
 const SecurityTraining = ({
   isReadOnly = false,
   disabledFieldColor = "#D0D5DD",
-  initialPeriodFrom = "",
-  initialPeriodTo = "",
-  initialExpiryDate = "",
+  initialPeriodFrom = "2025-06-12",
+  initialPeriodTo = "2026-06-12",
+  initialExpiryDate = "2026-06-12",
   initialExceptionType = "bulk",
 }) => {
   const [exceptionType, setExceptionType] = useState(initialExceptionType);
@@ -36,9 +36,7 @@ const SecurityTraining = ({
   const [activeCalendarField, setActiveCalendarField] = useState(null);
   const [calendarPosition, setCalendarPosition] = useState({ top: 0, left: 0 });
 
-  const [securityException, setSecurityException] = useState(
-    "SMTP- Outlook access/usage of SMTP host to send emails"
-  );
+  const [securityException, setSecurityException] = useState(0);
   const [problemDescription, setProblemDescription] =
     useState("XXX-XXX-XX-XXX-X");
   const [impactOnProject, setImpactOnProject] = useState("XXX-XXX-XX-XXX-X");
@@ -294,9 +292,11 @@ const SecurityTraining = ({
                 <input
                   type="radio"
                   name="securityException"
-                  value={option}
-                  checked={securityException === option}
-                  onChange={(e) => setSecurityException(e.target.value)}
+                  value={index}
+                  checked={securityException === index}
+                  onChange={(e) =>
+                    setSecurityException(parseInt(e.target.value))
+                  }
                   className="radio-input"
                   disabled={isReadOnly}
                 />

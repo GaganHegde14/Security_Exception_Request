@@ -110,17 +110,32 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 12px;
-  height: 12px;
+  width: 11px;
+  height: 11px;
   border-radius: 50%;
   background-color: #38aee0;
   transform: translate(-50%, -50%);
+}
+
+.radio-input:focus {
+  border-color: #38aee0;
+  box-shadow: 0 0 0 3px rgba(56, 174, 224, 0.1);
+  outline: none;
+}
+
+.radio-input:checked:focus {
+  border-color: #38aee0;
+  box-shadow: 0 0 0 3px rgba(56, 174, 224, 0.1);
 }
 
 .radio-label {
   font-weight: 400;
   color: #333333;
   font-size: 14px;
+}
+
+.radio-input:checked + .radio-label {
+  font-weight: 700;
 }
 
 /* Form Sections */
@@ -252,7 +267,44 @@
 
 /* Make only selected radio button text bold */
 .readonly-form .radio-input:checked:disabled + .radio-label {
-  font-weight: 600;
+  font-weight: 700;
+}
+
+/* Readonly form styling for vertical radio buttons (SMTP list) */
+.readonly-form .radio-option-vertical .radio-input {
+  border: 2px solid #838383;
+  background: #ffffff;
+}
+
+.readonly-form .radio-option-vertical .radio-input:checked {
+  border: 2px solid #838383;
+  background: #ffffff;
+}
+
+.readonly-form .radio-option-vertical .radio-input:checked::after {
+  background-color: #838383;
+}
+
+.readonly-form .radio-option-vertical .radio-input:focus {
+  border-color: #838383;
+  box-shadow: 0 0 0 3px rgba(131, 131, 131, 0.1);
+}
+
+.readonly-form .radio-option-vertical .radio-input:checked:focus {
+  border-color: #838383;
+  box-shadow: 0 0 0 3px rgba(131, 131, 131, 0.1);
+}
+
+.readonly-form .radio-option-vertical .radio-label-vertical {
+  font-weight: 400;
+  color: #374151;
+}
+
+.readonly-form
+  .radio-option-vertical
+  .radio-input:checked:disabled
+  + .radio-label-vertical {
+  font-weight: 400;
 }
 
 /* Date Fields Container - Increased width and better spacing */
@@ -445,7 +497,7 @@
 }
 
 .radio-option-vertical .radio-input:checked {
-  border: 2px solid #838383;
+  border: 2px solid #38aee0;
   background: #ffffff;
 }
 
@@ -454,15 +506,20 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 12px;
-  height: 12px;
+  width: 11px;
+  height: 11px;
   border-radius: 100%;
-  background-color: #838383;
+  background-color: #38aee0;
   transform: translate(-50%, -50%);
 }
 
 .radio-option-vertical .radio-input:focus {
-  border-color: #838383;
+  border-color: #38aee0;
+  box-shadow: 0 0 0 3px rgba(56, 174, 224, 0.1);
+}
+
+.radio-option-vertical .radio-input:checked:focus {
+  border-color: #38aee0;
   box-shadow: 0 0 0 3px rgba(56, 174, 224, 0.1);
 }
 
